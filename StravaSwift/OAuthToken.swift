@@ -21,7 +21,7 @@ public struct OAuthToken: Strava {
     public let accessToken: String?
     
     /** The athlete **/
-    public let athlete: Athlete?
+    public var athlete: Athlete?
 
     /**
      Initializer
