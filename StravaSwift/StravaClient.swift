@@ -129,7 +129,6 @@ extension StravaClient {
                 } else {
                     result(response.result.value)
                 }
-                result(response.result.value)
             }
         } catch let error as NSError {
             failure(error)
