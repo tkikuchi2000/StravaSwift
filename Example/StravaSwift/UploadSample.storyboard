@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a6l-wc-ERM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload-->
+        <scene sceneID="i8j-Wx-H3Z">
+            <objects>
+                <viewController id="a6l-wc-ERM" customClass="UploadSampleViewController" customModule="StravaSwift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWh-rD-nyz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Sample Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inj-Mp-LbD">
+                                <rect key="frame" x="16" y="173.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="i2f-Ub-GMD">
+                                <rect key="frame" x="80" y="226" width="160" height="116"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbD-rY-c41">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                                        <color key="backgroundColor" red="0.9882352941176471" green="0.29803921568627451" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nVZ-4X-0WP"/>
+                                        </constraints>
+                                        <state key="normal" title="TCXData">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapTCXDataButton:" destination="a6l-wc-ERM" eventType="touchUpInside" id="LuB-A5-Sna"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-NT-dPE">
+                                        <rect key="frame" x="0.0" y="66" width="160" height="50"/>
+                                        <color key="backgroundColor" red="0.9882352941176471" green="0.29803921568627451" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="GPXData">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapGPXDataButton:" destination="a6l-wc-ERM" eventType="touchUpInside" id="lPR-Zo-oji"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xdh-NT-dPE" firstAttribute="width" secondItem="fbD-rY-c41" secondAttribute="width" id="qcR-fd-Ete"/>
+                                    <constraint firstItem="fbD-rY-c41" firstAttribute="width" secondItem="i2f-Ub-GMD" secondAttribute="width" id="xeT-fu-DCe"/>
+                                    <constraint firstItem="xdh-NT-dPE" firstAttribute="height" secondItem="fbD-rY-c41" secondAttribute="height" id="ykK-TT-If0"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hvn-Xp-oTT" userLabel="Status Stack View">
+                                <rect key="frame" x="0.0" y="374" width="320" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="&lt;upload status&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-LN-scG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="fZX-JN-1Ph"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yn-uT-nLi">
+                                        <rect key="frame" x="0.0" y="100" width="320" height="30"/>
+                                        <state key="normal" title="Reload status"/>
+                                        <connections>
+                                            <action selector="didTapReloadStatusButton:" destination="a6l-wc-ERM" eventType="touchUpInside" id="6uC-XS-hTA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="api_logo_cptblWith_strava_horiz_gray" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-YX-jNx">
+                                <rect key="frame" x="192" y="20" width="128" height="64"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hvn-Xp-oTT" firstAttribute="leading" secondItem="zWP-Tt-XAm" secondAttribute="leading" id="AJB-0j-PT3"/>
+                            <constraint firstItem="zWP-Tt-XAm" firstAttribute="trailing" secondItem="Hvn-Xp-oTT" secondAttribute="trailing" id="BUw-17-1Cf"/>
+                            <constraint firstItem="Hvn-Xp-oTT" firstAttribute="top" secondItem="i2f-Ub-GMD" secondAttribute="bottom" constant="32" id="EE8-fz-ROc"/>
+                            <constraint firstItem="7bl-YX-jNx" firstAttribute="trailing" secondItem="zWP-Tt-XAm" secondAttribute="trailing" id="K5D-TN-TPU"/>
+                            <constraint firstItem="i2f-Ub-GMD" firstAttribute="centerX" secondItem="aWh-rD-nyz" secondAttribute="centerX" id="Lh2-V0-rZE"/>
+                            <constraint firstItem="inj-Mp-LbD" firstAttribute="leading" secondItem="aWh-rD-nyz" secondAttribute="leadingMargin" id="OM9-da-nbS"/>
+                            <constraint firstItem="i2f-Ub-GMD" firstAttribute="width" secondItem="zWP-Tt-XAm" secondAttribute="width" multiplier="50%" id="R5y-i3-0ao"/>
+                            <constraint firstItem="i2f-Ub-GMD" firstAttribute="top" secondItem="inj-Mp-LbD" secondAttribute="bottom" constant="32" id="VfB-OD-08f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="inj-Mp-LbD" secondAttribute="trailing" id="Y2X-Hc-Dks"/>
+                            <constraint firstItem="i2f-Ub-GMD" firstAttribute="centerY" secondItem="aWh-rD-nyz" secondAttribute="centerY" id="byi-KN-bWo"/>
+                            <constraint firstItem="7bl-YX-jNx" firstAttribute="top" secondItem="zWP-Tt-XAm" secondAttribute="top" id="qlp-vk-7o2"/>
+                            <constraint firstItem="7bl-YX-jNx" firstAttribute="width" secondItem="zWP-Tt-XAm" secondAttribute="width" multiplier="40%" id="rnz-Hk-dXL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zWP-Tt-XAm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Upload" id="UKj-P5-sZ4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonStackView" destination="i2f-Ub-GMD" id="eBT-GS-dF9"/>
+                        <outlet property="statusLabel" destination="bfW-LN-scG" id="IBZ-BJ-uYz"/>
+                        <outlet property="statusStackView" destination="Hvn-Xp-oTT" id="Lw3-R8-77p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJ3-E8-O65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="45"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="api_logo_cptblWith_strava_horiz_gray" width="393" height="64"/>
+    </resources>
+</document>

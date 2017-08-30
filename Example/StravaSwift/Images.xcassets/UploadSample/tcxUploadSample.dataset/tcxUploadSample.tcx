@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrainingCenterDatabase xsi:schemaLocation="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2 http://www.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd" xmlns:ns5="http://www.garmin.com/xmlschemas/ActivityGoals/v1" xmlns:ns3="http://www.garmin.com/xmlschemas/ActivityExtension/v2" xmlns:ns2="http://www.garmin.com/xmlschemas/UserProfile/v2" xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <Activities>
+  <Activity Sport="Biking">
+   <Id>2017-08-30T10:54:54Z</Id>
+   <Lap StartTime="2017-08-30T10:54:54Z">
+    <TotalTimeSeconds>69</TotalTimeSeconds>
+    <DistanceMeters>557.0</DistanceMeters>
+    <MaximumSpeed>16.1</MaximumSpeed>
+    <Calories>0</Calories>
+    <Intensity>Active</Intensity>
+    <Cadence>100</Cadence>
+    <TriggerMethod>Manual</TriggerMethod>
+
+    <Track>
+
+     <Trackpoint>
+      <Time>2017-08-30T10:54:54Z</Time>
+      <Position>
+       <LatitudeDegrees>33.5889280</LatitudeDegrees>
+       <LongitudeDegrees>130.3952480</LongitudeDegrees>
+      </Position>
+      <AltitudeMeters>14.5</AltitudeMeters>
+      <DistanceMeters>0.0</DistanceMeters>
+      <Cadence>100</Cadence>
+      <Extensions>
+       <TPX xmlns="http://www.garmin.com/xmlschemas/ActivityExtension/v2">
+        <Speed>16.1</Speed>
+       </TPX>
+      </Extensions>
+     </Trackpoint>
+
+     <Trackpoint>
+      <Time>2017-08-30T10:56:02Z</Time>
+      <Position>
+       <LatitudeDegrees>33.5899080</LatitudeDegrees>
+       <LongitudeDegrees>130.3962070</LongitudeDegrees>
+      </Position>
+      <AltitudeMeters>14.2</AltitudeMeters>
+      <DistanceMeters>557.8</DistanceMeters>
+      <Cadence>100</Cadence>
+      <Extensions>
+       <TPX xmlns="http://www.garmin.com/xmlschemas/ActivityExtension/v2">
+        <Speed>16.1</Speed>
+       </TPX>
+      </Extensions>
+     </Trackpoint>
+
+    </Track>
+
+   </Lap>
+  </Activity>
+ </Activities>
+</TrainingCenterDatabase>
