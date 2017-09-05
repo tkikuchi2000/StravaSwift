@@ -281,6 +281,15 @@ public enum RouteSubType: Int {
  **/
 public enum DataType: String {
     case fit = "fit", fitGz = "fit.gz", tcx = "tcx", tcxGz = "tcx.gz", gpx = "gpx", gpxGz = "gpx.gz"
+    public var suffix: String { return self.rawValue }
+    public var mimeType: String {
+        switch self {
+        case .fit: return "application/vnd.ant.fit"
+        case .tcx: return "application/vnd.garmin.tcx+xml"
+        case .gpx: return "application/gpx+xml"
+        case .fitGz, .tcxGz, .gpxGz: return "application/gzip"
+        }
+    }
 }
 
 

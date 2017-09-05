@@ -129,7 +129,6 @@ extension StravaClient {
                 } else {
                     result(response.result.value)
                 }
-                result(response.result.value)
             }
         } catch let error as NSError {
             failure(error)
@@ -219,10 +218,13 @@ extension StravaClient {
         guard let url = try? URLRequest.asURLRequest() else { return }
         
         Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(upload.file, withName: "\(upload.name ?? "default").\(upload.dataType)")
-            for (key, value) in upload.params {
-                if let value = value as? String {
-                    multipartFormData.append(value.data(using: .utf8)!, withName: key)
+            multipartFormData.append(upload.file,
+                                     withName: "file",
+                                     fileName: "\(upload.externalId ?? "fileName")." + upload.dataType.suffix,
+                                     mimeType: upload.dataType.mimeType)
+            upload.params.forEach { key, value in
+                if let value = value as? String, let data = value.data(using: .utf8) {
+                    multipartFormData.append(data , withName: key)
                 }
             }
         }, usingThreshold: SessionManager.multipartFormDataEncodingMemoryThreshold, with: url) { encodingResult in
